@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+  PERIODIC TABLE - index.html (the CONTENT of the page)
+
+  BIG IDEA (say this first in your video):
+  The periodic table is just a GRID. It has 18 columns (groups) and
+  7 rows (periods). So I:
+    1. Write one small box (<div>) for every element in HTML (this file).
+    2. Use CSS Grid (style.css) to arrange all the boxes into 18 columns.
+    3. Use CSS classes to colour each box by its category.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Periodic Table</title>
+
+  <!-- Link the external CSS file: this is what connects the two files -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Periodic Table of Elements</h1>
+
+  <!--
+    The container. Everything inside it becomes a grid cell
+    because of the ".table" rule in style.css.
+    Each element is written like this:
+      <div class="el CATEGORY">
+        <span class="num">atomic number</span>
+        <span class="sym">symbol</span>
+        <span class="name">name</span>
+      </div>
+    "CATEGORY" (e.g. alkali, noble) decides the colour.
+    Elements are written in the same order as the real table, row by row.
+  -->
+  <div class="table">
+
+    <!-- ===== PERIOD 1 (2 elements) ===== -->
+    <div class="el nonmetal"><span class="num">1</span><span class="sym">H</span><span class="name">Hydrogen</span></div>
+    <div class="gap-16"></div> <!-- 16 empty columns between H and He -->
+    <div class="el noble"><span class="num">2</span><span class="sym">He</span><span class="name">Helium</span></div>
+
+    <!-- ===== PERIOD 2 (8 elements) ===== -->
+    <div class="el alkali"><span class="num">3</span><span class="sym">Li</span><span class="name">Lithium</span></div>
+    <div class="el alkaline"><span class="num">4</span><span class="sym">Be</span><span class="name">Beryllium</span></div>
+    <div class="gap-10"></div> <!-- 10 empty columns (where transition metals would be) -->
+    <div class="el metalloid"><span class="num">5</span><span class="sym">B</span><span class="name">Boron</span></div>
+    <div class="el nonmetal"><span class="num">6</span><span class="sym">C</span><span class="name">Carbon</span></div>
+    <div class="el nonmetal"><span class="num">7</span><span class="sym">N</span><span class="name">Nitrogen</span></div>
+    <div class="el nonmetal"><span class="num">8</span><span class="sym">O</span><span class="name">Oxygen</span></div>
+    <div class="el halogen"><span class="num">9</span><span class="sym">F</span><span class="name">Fluorine</span></div>
+    <div class="el noble"><span class="num">10</span><span class="sym">Ne</span><span class="name">Neon</span></div>
+
+    <!-- ===== PERIOD 3 (8 elements) ===== -->
+    <div class="el alkali"><span class="num">11</span><span class="sym">Na</span><span class="name">Sodium</span></div>
+    <div class="el alkaline"><span class="num">12</span><span class="sym">Mg</span><span class="name">Magnesium</span></div>
+    <div class="gap-10"></div>
+    <div class="el post"><span class="num">13</span><span class="sym">Al</span><span class="name">Aluminium</span></div>
+    <div class="el metalloid"><span class="num">14</span><span class="sym">Si</span><span class="name">Silicon</span></div>
+    <div class="el nonmetal"><span class="num">15</span><span class="sym">P</span><span class="name">Phosphorus</span></div>
+    <div class="el nonmetal"><span class="num">16</span><span class="sym">S</span><span class="name">Sulfur</span></div>
+    <div class="el halogen"><span class="num">17</span><span class="sym">Cl</span><span class="name">Chlorine</span></div>
+    <div class="el noble"><span class="num">18</span><span class="sym">Ar</span><span class="name">Argon</span></div>
+
+    <!-- ===== PERIOD 4 (18 elements, full row - no gaps needed) ===== -->
+    <div class="el alkali"><span class="num">19</span><span class="sym">K</span><span class="name">Potassium</span></div>
+    <div class="el alkaline"><span class="num">20</span><span class="sym">Ca</span><span class="name">Calcium</span></div>
+    <div class="el transition"><span class="num">21</span><span class="sym">Sc</span><span class="name">Scandium</span></div>
+    <div class="el transition"><span class="num">22</span><span class="sym">Ti</span><span class="name">Titanium</span></div>
+    <div class="el transition"><span class="num">23</span><span class="sym">V</span><span class="name">Vanadium</span></div>
+    <div class="el transition"><span class="num">24</span><span class="sym">Cr</span><span class="name">Chromium</span></div>
+    <div class="el transition"><span class="num">25</span><span class="sym">Mn</span><span class="name">Manganese</span></div>
+    <div class="el transition"><span class="num">26</span><span class="sym">Fe</span><span class="name">Iron</span></div>
+    <div class="el transition"><span class="num">27</span><span class="sym">Co</span><span class="name">Cobalt</span></div>
+    <div class="el transition"><span class="num">28</span><span class="sym">Ni</span><span class="name">Nickel</span></div>
+    <div class="el transition"><span class="num">29</span><span class="sym">Cu</span><span class="name">Copper</span></div>
+    <div class="el transition"><span class="num">30</span><span class="sym">Zn</span><span class="name">Zinc</span></div>
+    <div class="el post"><span class="num">31</span><span class="sym">Ga</span><span class="name">Gallium</span></div>
+    <div class="el metalloid"><span class="num">32</span><span class="sym">Ge</span><span class="name">Germanium</span></div>
+    <div class="el metalloid"><span class="num">33</span><span class="sym">As</span><span class="name">Arsenic</span></div>
+    <div class="el nonmetal"><span class="num">34</span><span class="sym">Se</span><span class="name">Selenium</span></div>
+    <div class="el halogen"><span class="num">35</span><span class="sym">Br</span><span class="name">Bromine</span></div>
+    <div class="el noble"><span class="num">36</span><span class="sym">Kr</span><span class="name">Krypton</span></div>
+
+    <!-- ===== PERIOD 5 (18 elements) ===== -->
+    <div class="el alkali"><span class="num">37</span><span class="sym">Rb</span><span class="name">Rubidium</span></div>
+    <div class="el alkaline"><span class="num">38</span><span class="sym">Sr</span><span class="name">Strontium</span></div>
+    <div class="el transition"><span class="num">39</span><span class="sym">Y</span><span class="name">Yttrium</span></div>
+    <div class="el transition"><span class="num">40</span><span class="sym">Zr</span><span class="name">Zirconium</span></div>
+    <div class="el transition"><span class="num">41</span><span class="sym">Nb</span><span class="name">Niobium</span></div>
+    <div class="el transition"><span class="num">42</span><span class="sym">Mo</span><span class="name">Molybdenum</span></div>
+    <div class="el transition"><span class="num">43</span><span class="sym">Tc</span><span class="name">Technetium</span></div>
+    <div class="el transition"><span class="num">44</span><span class="sym">Ru</span><span class="name">Ruthenium</span></div>
+    <div class="el transition"><span class="num">45</span><span class="sym">Rh</span><span class="name">Rhodium</span></div>
+    <div class="el transition"><span class="num">46</span><span class="sym">Pd</span><span class="name">Palladium</span></div>
+    <div class="el transition"><span class="num">47</span><span class="sym">Ag</span><span class="name">Silver</span></div>
+    <div class="el transition"><span class="num">48</span><span class="sym">Cd</span><span class="name">Cadmium</span></div>
+    <div class="el post"><span class="num">49</span><span class="sym">In</span><span class="name">Indium</span></div>
+    <div class="el post"><span class="num">50</span><span class="sym">Sn</span><span class="name">Tin</span></div>
+    <div class="el metalloid"><span class="num">51</span><span class="sym">Sb</span><span class="name">Antimony</span></div>
+    <div class="el metalloid"><span class="num">52</span><span class="sym">Te</span><span class="name">Tellurium</span></div>
+    <div class="el halogen"><span class="num">53</span><span class="sym">I</span><span class="name">Iodine</span></div>
+    <div class="el noble"><span class="num">54</span><span class="sym">Xe</span><span class="name">Xenon</span></div>
+
+    <!-- ===== PERIOD 6 (18 cells) =====
+         After Barium, the 15 lanthanides don't fit in this row, so
+         they're shown separately at the bottom. A grey "57-71" box
+         tells the reader where they belong. -->
+    <div class="el alkali"><span class="num">55</span><span class="sym">Cs</span><span class="name">Caesium</span></div>
+    <div class="el alkaline"><span class="num">56</span><span class="sym">Ba</span><span class="name">Barium</span></div>
+    <div class="el placeholder"><span class="num">57-71</span><span class="sym">*</span><span class="name">Lanthanides</span></div>
+    <div class="el transition"><span class="num">72</span><span class="sym">Hf</span><span class="name">Hafnium</span></div>
+    <div class="el transition"><span class="num">73</span><span class="sym">Ta</span><span class="name">Tantalum</span></div>
+    <div class="el transition"><span class="num">74</span><span class="sym">W</span><span class="name">Tungsten</span></div>
+    <div class="el transition"><span class="num">75</span><span class="sym">Re</span><span class="name">Rhenium</span></div>
+    <div class="el transition"><span class="num">76</span><span class="sym">Os</span><span class="name">Osmium</span></div>
+    <div class="el transition"><span class="num">77</span><span class="sym">Ir</span><span class="name">Iridium</span></div>
+    <div class="el transition"><span class="num">78</span><span class="sym">Pt</span><span class="name">Platinum</span></div>
+    <div class="el transition"><span class="num">79</span><span class="sym">Au</span><span class="name">Gold</span></div>
+    <div class="el transition"><span class="num">80</span><span class="sym">Hg</span><span class="name">Mercury</span></div>
+    <div class="el post"><span class="num">81</span><span class="sym">Tl</span><span class="name">Thallium</span></div>
+    <div class="el post"><span class="num">82</span><span class="sym">Pb</span><span class="name">Lead</span></div>
+    <div class="el post"><span class="num">83</span><span class="sym">Bi</span><span class="name">Bismuth</span></div>
+    <div class="el post"><span class="num">84</span><span class="sym">Po</span><span class="name">Polonium</span></div>
+    <div class="el halogen"><span class="num">85</span><span class="sym">At</span><span class="name">Astatine</span></div>
+    <div class="el noble"><span class="num">86</span><span class="sym">Rn</span><span class="name">Radon</span></div>
+
+    <!-- ===== PERIOD 7 (18 cells) - same idea, actinides go to the bottom ===== -->
+    <div class="el alkali"><span class="num">87</span><span class="sym">Fr</span><span class="name">Francium</span></div>
+    <div class="el alkaline"><span class="num">88</span><span class="sym">Ra</span><span class="name">Radium</span></div>
+    <div class="el placeholder"><span class="num">89-103</span><span class="sym">**</span><span class="name">Actinides</span></div>
+    <div class="el transition"><span class="num">104</span><span class="sym">Rf</span><span class="name">Rutherfordium</span></div>
+    <div class="el transition"><span class="num">105</span><span class="sym">Db</span><span class="name">Dubnium</span></div>
+    <div class="el transition"><span class="num">106</span><span class="sym">Sg</span><span class="name">Seaborgium</span></div>
+    <div class="el transition"><span class="num">107</span><span class="sym">Bh</span><span class="name">Bohrium</span></div>
+    <div class="el transition"><span class="num">108</span><span class="sym">Hs</span><span class="name">Hassium</span></div>
+    <div class="el transition"><span class="num">109</span><span class="sym">Mt</span><span class="name">Meitnerium</span></div>
+    <div class="el transition"><span class="num">110</span><span class="sym">Ds</span><span class="name">Darmstadtium</span></div>
+    <div class="el transition"><span class="num">111</span><span class="sym">Rg</span><span class="name">Roentgenium</span></div>
+    <div class="el transition"><span class="num">112</span><span class="sym">Cn</span><span class="name">Copernicium</span></div>
+    <div class="el post"><span class="num">113</span><span class="sym">Nh</span><span class="name">Nihonium</span></div>
+    <div class="el post"><span class="num">114</span><span class="sym">Fl</span><span class="name">Flerovium</span></div>
+    <div class="el post"><span class="num">115</span><span class="sym">Mc</span><span class="name">Moscovium</span></div>
+    <div class="el post"><span class="num">116</span><span class="sym">Lv</span><span class="name">Livermorium</span></div>
+    <div class="el halogen"><span class="num">117</span><span class="sym">Ts</span><span class="name">Tennessine</span></div>
+    <div class="el noble"><span class="num">118</span><span class="sym">Og</span><span class="name">Oganesson</span></div>
+
+    <!-- A blank row to separate the main table from the two bottom rows -->
+    <div class="gap-row"></div>
+
+    <!-- ===== LANTHANIDES (15 elements) =====
+         Start with a 2-column gap so the row lines up under the
+         main table (columns 3 to 17). -->
+    <div class="gap-2"></div>
+    <div class="el lanthanide"><span class="num">57</span><span class="sym">La</span><span class="name">Lanthanum</span></div>
+    <div class="el lanthanide"><span class="num">58</span><span class="sym">Ce</span><span class="name">Cerium</span></div>
+    <div class="el lanthanide"><span class="num">59</span><span class="sym">Pr</span><span class="name">Praseodymium</span></div>
+    <div class="el lanthanide"><span class="num">60</span><span class="sym">Nd</span><span class="name">Neodymium</span></div>
+    <div class="el lanthanide"><span class="num">61</span><span class="sym">Pm</span><span class="name">Promethium</span></div>
+    <div class="el lanthanide"><span class="num">62</span><span class="sym">Sm</span><span class="name">Samarium</span></div>
+    <div class="el lanthanide"><span class="num">63</span><span class="sym">Eu</span><span class="name">Europium</span></div>
+    <div class="el lanthanide"><span class="num">64</span><span class="sym">Gd</span><span class="name">Gadolinium</span></div>
+    <div class="el lanthanide"><span class="num">65</span><span class="sym">Tb</span><span class="name">Terbium</span></div>
+    <div class="el lanthanide"><span class="num">66</span><span class="sym">Dy</span><span class="name">Dysprosium</span></div>
+    <div class="el lanthanide"><span class="num">67</span><span class="sym">Ho</span><span class="name">Holmium</span></div>
+    <div class="el lanthanide"><span class="num">68</span><span class="sym">Er</span><span class="name">Erbium</span></div>
+    <div class="el lanthanide"><span class="num">69</span><span class="sym">Tm</span><span class="name">Thulium</span></div>
+    <div class="el lanthanide"><span class="num">70</span><span class="sym">Yb</span><span class="name">Ytterbium</span></div>
+    <div class="el lanthanide"><span class="num">71</span><span class="sym">Lu</span><span class="name">Lutetium</span></div>
+    <div class="gap-1"></div> <!-- no style defined: it just fills the last (18th) cell -->
+
+    <!-- ===== ACTINIDES (15 elements) ===== -->
+    <div class="gap-2"></div>
+    <div class="el actinide"><span class="num">89</span><span class="sym">Ac</span><span class="name">Actinium</span></div>
+    <div class="el actinide"><span class="num">90</span><span class="sym">Th</span><span class="name">Thorium</span></div>
+    <div class="el actinide"><span class="num">91</span><span class="sym">Pa</span><span class="name">Protactinium</span></div>
+    <div class="el actinide"><span class="num">92</span><span class="sym">U</span><span class="name">Uranium</span></div>
+    <div class="el actinide"><span class="num">93</span><span class="sym">Np</span><span class="name">Neptunium</span></div>
+    <div class="el actinide"><span class="num">94</span><span class="sym">Pu</span><span class="name">Plutonium</span></div>
+    <div class="el actinide"><span class="num">95</span><span class="sym">Am</span><span class="name">Americium</span></div>
+    <div class="el actinide"><span class="num">96</span><span class="sym">Cm</span><span class="name">Curium</span></div>
+    <div class="el actinide"><span class="num">97</span><span class="sym">Bk</span><span class="name">Berkelium</span></div>
+    <div class="el actinide"><span class="num">98</span><span class="sym">Cf</span><span class="name">Californium</span></div>
+    <div class="el actinide"><span class="num">99</span><span class="sym">Es</span><span class="name">Einsteinium</span></div>
+    <div class="el actinide"><span class="num">100</span><span class="sym">Fm</span><span class="name">Fermium</span></div>
+    <div class="el actinide"><span class="num">101</span><span class="sym">Md</span><span class="name">Mendelevium</span></div>
+    <div class="el actinide"><span class="num">102</span><span class="sym">No</span><span class="name">Nobelium</span></div>
+    <div class="el actinide"><span class="num">103</span><span class="sym">Lr</span><span class="name">Lawrencium</span></div>
+
+  </div>
+
+  <!-- ===== LEGEND (colour key) =====
+       Reuses the SAME colour classes as the elements, so the key
+       always matches the table. -->
+  <div class="legend">
+    <span class="alkali">Alkali metals</span>
+    <span class="alkaline">Alkaline earth metals</span>
+    <span class="transition">Transition metals</span>
+    <span class="post">Post-transition metals</span>
+    <span class="metalloid">Metalloids</span>
+    <span class="nonmetal">Nonmetals</span>
+    <span class="halogen">Halogens</span>
+    <span class="noble">Noble gases</span>
+    <span class="lanthanide">Lanthanides</span>
+    <span class="actinide">Actinides</span>
+  </div>
+
+</body>
+</html>

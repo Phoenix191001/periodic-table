@@ -1,0 +1,109 @@
+/* PERIODIC TABLE - style.css
+   This file holds all the LOOK of the page (layout + colours).
+   index.html holds the CONTENT (the elements). Keeping them apart is good practice. */
+
+/* ------------------------------------------------------------
+   1. PAGE BASICS
+   ------------------------------------------------------------ */
+body {
+  font-family: Arial, sans-serif;  /* simple, clean font */
+  background: #f4f4f4;             /* light grey page background */
+  margin: 20px;                    /* space around the page edges */
+}
+
+h1 {
+  text-align: center;              /* centre the title */
+}
+
+/* ------------------------------------------------------------
+   2. THE GRID (the most important part!)
+   ------------------------------------------------------------
+   display: grid               -> turns this container into a grid
+   grid-template-columns:      -> "repeat(18, 1fr)" means
+                                  "make 18 columns, all equal width"
+   gap: 4px                    -> small space between the boxes
+   Every element box inside automatically fills the next free cell,
+   left to right, then wraps to the next row.                      */
+.table {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: 4px;
+  max-width: 1200px;               /* don't get too wide on big screens */
+  margin: 0 auto;                  /* centre the table on the page */
+}
+
+/* ------------------------------------------------------------
+   3. ONE ELEMENT BOX
+   ------------------------------------------------------------
+   Each element has: atomic number (small, top), symbol (big),
+   and name (small, bottom). Flexbox stacks them vertically and
+   centres them.                                                */
+.el {
+  display: flex;
+  flex-direction: column;          /* stack items top to bottom */
+  align-items: center;             /* centre horizontally */
+  padding: 4px 0;
+  border: 1px solid #555;
+  border-radius: 4px;              /* slightly rounded corners */
+  text-align: center;
+  cursor: pointer;
+}
+
+.el .num  { font-size: 10px; }                    /* atomic number */
+.el .sym  { font-size: 18px; font-weight: bold; } /* symbol: biggest text */
+.el .name { font-size: 9px; }                     /* element name */
+
+/* Hover effect: when the mouse is over a box it gets slightly bigger.
+   "transform: scale" is a simple CSS-only animation. */
+.el:hover {
+  transform: scale(1.25);
+  position: relative;              /* needed so z-index works */
+  z-index: 1;                      /* draw it on top of neighbours */
+  box-shadow: 0 0 8px black;
+}
+
+/* ------------------------------------------------------------
+   4. SPACERS
+   ------------------------------------------------------------
+   The table has empty spaces (e.g. between Hydrogen and Helium).
+   A "gap" is an invisible box that "spans" several columns.
+   "grid-column: span 16" = "take up 16 columns".               */
+.gap-16 { grid-column: span 16; }   /* Period 1: between H and He */
+.gap-10 { grid-column: span 10; }   /* Periods 2-3: the empty middle */
+.gap-2  { grid-column: span 2; }    /* Lanthanide/Actinide rows start at column 3 */
+.gap-row { grid-column: span 18; height: 15px; } /* blank line between main table and bottom rows */
+
+/* ------------------------------------------------------------
+   5. COLOURS BY CATEGORY
+   ------------------------------------------------------------
+   Each element gets a class (e.g. class="el alkali").
+   Changing one rule here recolours every element in that group. */
+.alkali      { background: #ff9999; }  /* Group 1 metals */
+.alkaline    { background: #ffcc99; }  /* Group 2 metals */
+.transition  { background: #ffe680; }  /* Transition metals */
+.post        { background: #b3d9ff; }  /* Post-transition metals */
+.metalloid   { background: #b3e6b3; }  /* Metalloids */
+.nonmetal    { background: #99e6e6; }  /* Other non-metals */
+.halogen     { background: #d9b3ff; }  /* Halogens */
+.noble       { background: #ffb3e6; }  /* Noble gases */
+.lanthanide  { background: #ccccff; }  /* Lanthanides */
+.actinide    { background: #e0b0c0; }  /* Actinides */
+.placeholder { background: #ddd; }     /* "57-71" and "89-103" markers */
+
+/* ------------------------------------------------------------
+   6. LEGEND (colour key under the table)
+   ------------------------------------------------------------ */
+.legend {
+  display: flex;                   /* put the items in a row */
+  flex-wrap: wrap;                 /* wrap onto next line if too narrow */
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.legend span {
+  padding: 5px 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-size: 13px;
+}
